@@ -6,7 +6,7 @@ class BooksController < ApplicationController
    def create
     @book = Book.new(book_params)
      if @book.save
-     flash[:notice] = "Your book has succesfully posted" 
+     flash[:notice] = "Your book has successfully posted" 
       redirect_to book_path(@book.id)
     else
       flash[:alret] = "Your posting has been missed"
@@ -29,7 +29,7 @@ class BooksController < ApplicationController
   def update
     @book = Book.find(params[:id])
    if @book.update(book_params)
-    flash[:notice] = "Your book has succesfully posted" 
+    flash[:notice] = "Your book has successfully posted" 
     redirect_to book_path(@book.id)  
   else
     flash[:alret] = "Your book has been missed"
